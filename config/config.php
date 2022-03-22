@@ -1,7 +1,11 @@
 <?php
 
 return [
-    'client' => env('GMGATEWAY_EPAY_CLIENT', 'https://ssl.ditonlinebetalingssystem.dk/remote/payment.asmx?WSDL'),
-    'merchant' => env('GMGATEWAY_EPAY_MERCHANT', ''),
-    'password' => env('GMGATEWAY_EPAY_PASSWORD', ''),
+    // Epay WSDL Configurations
+    'epay_merchant' => env('GMGATEWAY_EPAY_MERCHANT', ''),
+    'epay_password' => env('GMGATEWAY_EPAY_PASSWORD', ''),
+
+    // Economics WSDL Configurations
+    'economics_token' => env('GMGATEWAY_ECONOMICS_TOKEN', ''),
+    'economics_app_token' => env('GMGATEWAY_ECONOMICS_APP_TOKEN', ''),
 ];

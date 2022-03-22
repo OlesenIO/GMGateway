@@ -10,9 +10,9 @@ class Webservice
 
     public function __construct()
     {
-        $this->client = new \SoapClient(config('GMGateway.client'));
-        $this->merchant = config('GMGateway.merchant');
-        $this->pwd = config('GMGateway.password');
+        $this->client = new \SoapClient('https://ssl.ditonlinebetalingssystem.dk/remote/payment.asmx?WSDL');
+        $this->merchant = config('GMGateway.epay_merchant');
+        $this->pwd = config('GMGateway.epay_password');
     }
 
     /**
