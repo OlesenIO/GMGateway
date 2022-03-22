@@ -5,6 +5,7 @@ namespace OlesenIO\GMGateway;
 use OlesenIO\GMGateway\Economics\Format\Product;
 use OlesenIO\GMGateway\Economics\Webservice as EconomicsWebservice;
 use OlesenIO\GMGateway\EPay\Webservice as EPayWebservice;
+use OlesenIO\GMGateway\GLS\Webservice as GLSWebservice;
 
 class GMGateway
 {
@@ -21,6 +22,11 @@ class GMGateway
     public static function economic()
     {
         return new Restapi;
+    }
+
+    public static function gls()
+    {
+        return new GLSWebservice;
     }
 
     public static function createProductLine($product)
