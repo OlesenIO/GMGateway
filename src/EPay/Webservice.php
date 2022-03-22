@@ -27,7 +27,7 @@ class Webservice
         return $this->client->capture([
             'merchantnumber' => $this->merchant,
             'transactionid' => $transactionid,
-            'amount' => (string) $amount,
+            'amount' => (int) $amount,
             'pwd' => $this->pwd,
             'pbsResponse' => '-1',
             'epayresponse' => '-1',
@@ -62,7 +62,7 @@ class Webservice
         return $this->client->credit([
             'merchantnumber' => $this->merchant,
             'transactionid' => $transactionid,
-            'amount' => (string) $amount,
+            'amount' => (int) $amount,
             'pwd' => $this->pwd,
             'pbsResponse' => '-1',
             'epayresponse' => '-1',
@@ -92,7 +92,7 @@ class Webservice
      * @param mixed $language
      * @return mixed
      */
-    public function getEpayError($epay_response_code, $language)
+    public function getEpayError($epay_response_code, $language = 1)
     {
         $result = $this->client->getEpayError([
             'merchantnumber' => $this->merchant,
@@ -116,7 +116,7 @@ class Webservice
      * @param mixed $language
      * @return mixed
      */
-    public function getPbsError($pbs_response_code, $language)
+    public function getPbsError($pbs_response_code, $language = 1)
     {
         $result = $this->client->getPbsError([
             'merchantnumber' => $this->merchant,
