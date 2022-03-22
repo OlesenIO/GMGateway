@@ -42,10 +42,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "OlesenIO\\GMGateway\\ServiceProvider"
+        "OlesenIO\\GMGateway\\GatewayServiceProvider"
       ],
       "aliases": {
-        "GMGateway": "OlesenIO\\GMGateway\\Facade"
+        "GMGateway": "OlesenIO\\GMGateway\\GatewayFacade"
       }
     }
   }
