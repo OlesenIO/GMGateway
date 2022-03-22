@@ -1,0 +1,52 @@
+{
+  "name": "olesenio/gmgateway",
+  "description": "Gateway for custom ecommerce project",
+  "keywords": [
+    "OlesenIO"
+  ],
+  "homepage": "https://github.com/OlesenIO/GMGateway",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Andreas Olesen",
+      "email": "andreas_olesen@hotmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "illuminate/support": "^8.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.0",
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "OlesenIO\\GMGateway\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "OlesenIO\\GMGateway\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "OlesenIO\\GMGateway\\ServiceProvider"
+      ],
+      "aliases": {
+        "GMGateway": "OlesenIO\\GMGateway\\Facade"
+      }
+    }
+  }
+}
